@@ -50,7 +50,7 @@ const preguntas = [
 const inquireMenu = async () => {
 
   console.log("=====================".green);
-  console.log("seleccione una opcion".red);
+  console.log("seleccione una opcion".white);
   console.log("=====================\n".green);
 
   // destructuring option

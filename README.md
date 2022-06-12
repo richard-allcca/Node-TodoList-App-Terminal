@@ -38,3 +38,9 @@ esta app aun no tiene base de datos pero para la persistencia de datos utiliza '
     npm i colors
     npm i inquirer
     npm i uuid
+
+## Vista Previa
+
+![Menú Principal](./assets/node-todo-list.jpeg)
+
+![Listado de Tareas](./assets/listado-todo-list.jpeg)
