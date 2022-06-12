@@ -1,0 +1,17 @@
+{
+  "name": "4_tareas_pendientes",
+  "version": "1.0.0",
+  "description": "Programa de Listado de tareas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Richard Allcca Llano <richard_allcca_llano@hotmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "1.4.0",
+    "inquirer": "^8.0.0",
+    "uuid": "^8.3.2"
+  }
+}
