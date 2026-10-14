@@ -23,7 +23,7 @@ const main = async () => {
 
   const tareas = new Tareas();
 
-  //  verifica tareas en db 
+  //  verifica tareas en db
   const tareasDb = leerDb();
 
   if (tareasDb) tareas.cargarTareasDb(tareasDb)
@@ -31,7 +31,6 @@ const main = async () => {
   do {
 
     opt = await inquireMenu();
-    console.log({ opt }); //opcioón seleccionada
 
     switch (opt) {
       case "1":
@@ -50,8 +49,11 @@ const main = async () => {
         tareas.estadoTareas(false);
         break;
       case "5":
+        if (tareas.getListadoArr.length === 0) {
+          console.log("No hay tareas para completar.");
+          break;
+        }
         const ids = await mostrarlistCheck(tareas.getListadoArr);
-        // console.log(ids);
         tareas.toggleCompletadas(ids);
         break;
       case "6":
@@ -69,9 +71,14 @@ const main = async () => {
         break;
     }
 
-    guardarDb(tareas.getListadoArr); //puede ir dentro de switch case"1"
-    await pausa();
+    if (opt !== "0") {
+      guardarDb(tareas.getListadoArr);
+      await pausa();
+    }
   } while (opt !== "0");
 };
 
-main();
+main().catch((error) => {
+  console.error(`No se pudo iniciar la aplicación: ${error.message}`);
+  process.exitCode = 1;
+});

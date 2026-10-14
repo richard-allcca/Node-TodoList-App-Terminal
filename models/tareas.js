@@ -1,6 +1,6 @@
 /**
- ** modelo para manejar las tareas y su busqueda en la base de datos 
- * usaremos una lista de objetos Tarea y con la notación del punto 
+ ** modelo para manejar las tareas y su busqueda en la base de datos
+ * usaremos una lista de objetos Tarea y con la notación del punto
  * para buscar en la lista mediante el id
  * -listado:
  *    { 'uuid-1234567-1234567-2: { id:12, desc:asd,completadoEn:9231 } }
@@ -27,11 +27,11 @@ class Tareas {
 
   /**
    * It takes an array of objects and adds each object to the _listado object.
-   * @param [tarea] - [{id: 1, nombre: "tarea 1", completado: false}, {id: 2, nombre: "tarea 2",
+   * @param [tareas] - [{id: 1, nombre: "tarea 1", completado: false}, {id: 2, nombre: "tarea 2",
    * completado: false}]
    */
-  cargarTareasDb(tarea = []) {
-    tarea.forEach((el) => (this._listado[el.id] = el));
+  cargarTareasDb(tareas = []) {
+    tareas.forEach((el) => (this._listado[el.id] = el));
   }
 
   /**
@@ -91,7 +91,7 @@ class Tareas {
   }
 
   /**
-   * * Leer 
+   * * Leer
    * It takes the array of tasks, iterates over it, and prints out the task description and status.
    */
   listadoCompleto() {

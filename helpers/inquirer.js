@@ -91,7 +91,7 @@ const leerInput = async (message) => {
       name: "desc",
       message,
       validate(value) {
-        if (value.length === 0) {
+        if (!value.trim()) {
           return "Por favor ingrese un valor";
         }
         return true;
@@ -100,7 +100,7 @@ const leerInput = async (message) => {
   ];
 
   const { desc } = await inquirer.prompt(question);
-  return desc;
+  return desc.trim();
 };
 
 /**

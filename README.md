@@ -1,46 +1,22 @@
-# Node Aplicación de Terminal - Lista de Tareas
+# Lista de tareas para terminal
 
----
+Aplicación interactiva de consola para crear, listar, completar y eliminar tareas. Los datos se guardan localmente en `db/data.json`.
 
-👋 Hello, I'm Thouma.
+## Requisitos
 
-- [LinkedIn](https://www.linkedin.com/in/richard-allcca-llano/)
+- Node.js 18 o posterior
+- Dependencias instaladas con `npm install`
 
----
+## Uso
 
-## Description
+```sh
+npm start
+```
 
-- Aplicación de consola interactiva con menú y listado dinámico personalizado
-- Inquirer para la interacción con el usuario
-- consumo de Api para las coordenadas de la ciudad elegida
-- consumo de Api para el clima
+Las tareas se conservan entre ejecuciones en el archivo JSON del proyecto.
 
----
+## Pruebas
 
-## 📚 npm References
-
-- 🔗 [Npm Inquirer](https://www.npmjs.com/package//inquirer)
-- 🔗 [Npm UUID](https://www.npmjs.com/package/uuid)
-
-## ⚙ VS Code Extensions I Use
-
-- 🔗 [Node Require](https://marketplace.visualstudio.com/items?itemName=tgreen7.vs-code-node-require)
-- 🔗 [Prettier VS Code Extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- 🔗 [vscode-icons VS Code Extension](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)
-- 🔗 [Github Themes VS Code Extension](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme)
-
----
-
-esta app aun no tiene base de datos pero para la persistencia de datos utiliza 'FileSystem'
-
-## Dependencies
-
-    npm i colors
-    npm i inquirer
-    npm i uuid
-
-## Vista Previa
-
-![Menú Principal](./assets/node-todo-list.jpeg)
-
-![Listado de Tareas](./assets/listado-todo-list.jpeg)
+```sh
+npm test
+```
